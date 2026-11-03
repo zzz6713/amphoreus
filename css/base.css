@@ -1,0 +1,108 @@
+/* ==========================================================================
+   翁法罗斯 · AMPHOREUS　v1.0
+   深空 / 无限 / 黄金
+   ========================================================================== */
+
+:root{
+  --bg:        #05060a;
+  --bg-2:      #0a0d15;
+  --gold:      #d5b46d;
+  --gold-soft: #f6dfa3;
+  --gold-deep: #8f6a2d;
+  --violet:    #a48cd8;
+  --text:      #f1eee7;
+  --muted:     #a8a29e;
+  --line:      rgba(213,180,109,.16);
+  --panel:     rgba(5,6,10,.62);
+  --serif: "Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --display: "Cinzel","ZCOOL XiaoWei","Amphoreus Hui","Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:  "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --ease:  cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; scroll-padding-top:86px; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.9;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+
+::selection{ background:rgba(213,180,109,.28); color:#fff; }
+
+/* ---------- 背景层：深空底 / 细网格 / 柔和光晕 ---------- */
+#starfield{
+  position:fixed; inset:0;
+  width:100%; height:100%;
+  z-index:0; pointer-events:none;
+}
+
+/* 72px 金色细网格，向四周淡出 */
+.hairline{
+  position:fixed; inset:0;
+  z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(216,173,91,.07) 1px, transparent 0),
+    linear-gradient(90deg, rgba(216,173,91,.07) 1px, transparent 0);
+  background-size:72px 72px;
+  -webkit-mask-image:radial-gradient(ellipse 78% 68% at 50% 42%,#000 26%,transparent 88%);
+          mask-image:radial-gradient(ellipse 78% 68% at 50% 42%,#000 26%,transparent 88%);
+}
+
+/* 四团低饱和光晕，缓慢漂移 */
+.aurora{
+  position:fixed; inset:-8%;
+  z-index:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 42% 34% at 42% 18%, rgba(246,223,163,.07), transparent 72%),
+    radial-gradient(ellipse 44% 36% at 78% 68%, rgba(57,111,166,.075), transparent 74%),
+    radial-gradient(ellipse 34% 30% at 16% 62%, rgba(119,34,54,.05), transparent 74%),
+    radial-gradient(ellipse 62% 38% at 50% 102%, rgba(143,106,45,.10), transparent 76%);
+  animation:auroraDrift 44s ease-in-out infinite alternate;
+}
+@keyframes auroraDrift{
+  from{ transform:translate3d(-1.2%,-.8%,0) scale(1.02); }
+  to  { transform:translate3d(1.2%,1.2%,0) scale(1.07); }
+}
+
+.grain{
+  position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+
+/* 贯穿全站的无限符号水印：固定背景，滚动时始终在场 */
+.backdrop-infinity{
+  position:fixed; top:47%; left:50%;
+  width:min(1900px,168vw);
+  z-index:0; pointer-events:none;
+  color:rgba(213,180,109,.055);
+  transform:translate(-50%,-50%);
+  animation:infinityBreathe 22s ease-in-out infinite alternate;
+}
+@keyframes infinityBreathe{
+  from{ opacity:.55; transform:translate(-50%,-50%) scale(1); }
+  to  { opacity:1;   transform:translate(-50%,-50%) scale(1.035); }
+}
+
+/* ---------- 进度条 ---------- */
+.progress{
+  position:fixed; top:0; left:0; right:0; height:2px; z-index:70;
+  background:rgba(255,255,255,.04);
+}
+.progress span{
+  display:block; height:100%; width:0%;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-soft),var(--violet));
+  box-shadow:0 0 12px rgba(213,180,109,.7);
+}

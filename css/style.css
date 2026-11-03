@@ -1,0 +1,15 @@
+/* ==========================================================================
+   翁法罗斯 · AMPHOREUS　样式入口
+   分层说明：
+     base.css        设计变量 / 重置 / 字体 / 星空底色
+     layout.css      导航 / 首屏 / 版块 / 页脚
+     components.css  卡片 / 长廊 / 翻转卡 / 弹层
+     effects.css     动画 / 响应式 / 无障碍降级
+   https://localhost 本地静态站，@import 的开销可以忽略
+   ========================================================================== */
+@import url("../assets/fonts/cinzel.css");
+@import url("../assets/fonts/zcool.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("effects.css");

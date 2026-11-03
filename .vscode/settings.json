@@ -1,0 +1,16 @@
+{
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "css.lint.unknownAtRules": "ignore",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "index.html": "css, js, assets, README.md"
+  }
+}

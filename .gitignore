@@ -1,0 +1,10 @@
+# 本地素材：光锥原图（约 26MB，页面只用 webp 版）
+assets/lightcones/original/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+*.log

@@ -1,0 +1,80 @@
+{
+  "images": 170,
+  "ok": [
+    [
+      "aglaea",
+      "将光阴织成黄金",
+      "光锥-立绘-将光阴织成黄金.png"
+    ],
+    [
+      "tribbie",
+      "如果时间是一朵花",
+      "光锥-立绘-如果时间是一朵花.png"
+    ],
+    [
+      "mydei",
+      "血火啊，燃烧前路",
+      "光锥-立绘-血火啊，燃烧前路.png"
+    ],
+    [
+      "castorice",
+      "让告别，更美一些",
+      "光锥-立绘-让告别，更美一些.png"
+    ],
+    [
+      "anaxa",
+      "生命当付之一炬",
+      "光锥-立绘-生命当付之一炬.png"
+    ],
+    [
+      "hyacine",
+      "愿虹光永驻天空",
+      "光锥-立绘-愿虹光永驻天空.png"
+    ]
+  ],
+  "fail": [
+    [
+      "cipher",
+      "谎言在风中飘扬",
+      "HTTP Error 500: Internal Error"
+    ],
+    [
+      "phainon",
+      "黎明恰如此燃烧",
+      "HTTP Error 567: Unknown Status"
+    ],
+    [
+      "hysilens",
+      "海洋为何而歌",
+      "HTTP Error 567: Unknown Status"
+    ],
+    [
+      "cerydra",
+      "没有回报的加冕",
+      "HTTP Error 567: Unknown Status"
+    ],
+    [
+      "evernight",
+      "致长夜的星光",
+      "HTTP Error 567: Unknown Status"
+    ],
+    [
+      "danheng",
+      "纵然山河万程",
+      "HTTP Error 567: Unknown Status"
+    ],
+    [
+      "cyrene",
+      "爱如此刻永恒",
+      "HTTP Error 567: Unknown Status"
+    ]
+  ],
+  "size": {
+    "aglaea": 1965459,
+    "tribbie": 1635704,
+    "mydei": 2076599,
+    "castorice": 1994308,
+    "anaxa": 1868462,
+    "hyacine": 2176965
+  }
+}
